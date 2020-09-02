@@ -38,7 +38,7 @@ export class Finder {
         byKey[key].push(value);
         return byKey;
       },
-      {}
+      {} as { [key: string]: (string | number)[] }
     );
 
     return Object.entries(termsByKey);

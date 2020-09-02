@@ -31,7 +31,7 @@ export class FiltersJS {
     const finder = this.factory.getFinder(this.index, operations);
     const results = finder.find(terms);
 
-    const filters = this.getTerms(query).reduce((acc, term) => {
+    const filters = this.getTerms(query).reduce((acc: any, term) => {
       const termResults = finder.find([...terms, term]);
       if (termResults.length) {
         acc[term.key] = acc[term.key] || {};

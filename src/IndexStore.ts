@@ -13,7 +13,7 @@ function defaultMatchingFunction(value: string | number) {
   );
 }
 
-function deepGet(object = {}, path: string) {
+function deepGet(object: any = {}, path: string) {
   const keys = path.split(".");
   let value = object;
 

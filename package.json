@@ -14,10 +14,13 @@
     "@types/jest": "^24.0.15",
     "jest": "^24.8.0",
     "ts-jest": "^24.0.2",
-    "typescript": "^3.5.3"
+    "ts-loader": "^8.0.3",
+    "typescript": "^3.5.3",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "webpack --config  webpack.config.js --mode production",
     "prepublish": "yarn build",
     "test": "jest"
   }

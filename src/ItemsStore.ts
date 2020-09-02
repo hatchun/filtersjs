@@ -9,11 +9,11 @@ export class ItemsStore implements IDataProvider {
     this.itemsById = Object.fromEntries(items);
   }
 
-  get(id: string | number) {
+  get(id: number) {
     return this.itemsById[id];
   }
 
-  filter(precicate: FilterCallback) {
+  filter(precicate: FilterCallback): ItemsStore {
     return new ItemsStore(
       this.items.filter((itemWithId, idx) => precicate(itemWithId, idx, this))
     );
